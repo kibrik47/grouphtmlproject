@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: grouphtmlproject 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: grouphtmlproject
+  template:
+    metadata:
+      labels:
+        app: grouphtmlproject 
+    spec:
+      containers:
+        - name: grouphtmlproject 
+          image: htmlregistry.azurecr.io/grouphtmlproject
+          ports:
+          - containerPort: 80
