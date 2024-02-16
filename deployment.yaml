@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: html-tester
-        image: nginx:1.14.2
+        image: node:alpine
         ports:
         - containerPort: 80
